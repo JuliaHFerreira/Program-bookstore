@@ -28,6 +28,7 @@ type
     N4: TMenuItem;
     CriarnovoUsurio1: TMenuItem;
     rocardeUsurio1: TMenuItem;
+    Alugados1: TMenuItem;
   private
     { Private declarations }
   public

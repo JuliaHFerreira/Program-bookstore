@@ -2,127 +2,32 @@ object Form2: TForm2
   Left = 0
   Top = 0
   Caption = 'Cadastro de Livros'
-  ClientHeight = 434
-  ClientWidth = 709
+  ClientHeight = 419
+  ClientWidth = 711
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Menu = MainMenu1
   TextHeight = 15
-  object Label1: TLabel
-    Left = 32
-    Top = 24
-    Width = 238
-    Height = 37
-    Caption = 'Cadastro de Livros'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -27
-    Font.Name = 'Segoe UI'
-    Font.Style = [fsBold]
-    ParentFont = False
-  end
-  object Label6: TLabel
-    Left = 399
-    Top = 97
-    Width = 45
-    Height = 15
-    Caption = 'Resumo'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'Segoe UI'
-    Font.Style = [fsBold]
-    ParentFont = False
-  end
-  object CheckBox4: TCheckBox
-    Left = 399
-    Top = 67
-    Width = 58
-    Height = 17
-    Caption = 'Ativo'
-    TabOrder = 0
-  end
-  object Button1: TButton
-    Left = 104
-    Top = 384
-    Width = 169
-    Height = 33
-    Caption = 'Cadastrar'
-    TabOrder = 1
-  end
-  object Button2: TButton
-    Left = 288
-    Top = 384
-    Width = 169
-    Height = 33
-    Caption = 'Excluir'
-    TabOrder = 2
-  end
-  object Button3: TButton
-    Left = 463
-    Top = 384
-    Width = 169
-    Height = 33
-    Caption = 'Pesquisar'
-    TabOrder = 3
-  end
-  object Memo1: TMemo
-    Left = 399
-    Top = 118
-    Width = 281
-    Height = 123
-    TabOrder = 4
-  end
-  object GroupBox1: TGroupBox
-    Left = 399
-    Top = 257
-    Width = 185
-    Height = 98
-    Caption = 'Canais de Venda'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'Segoe UI'
-    Font.Style = [fsBold]
-    ParentFont = False
-    TabOrder = 5
-    object CheckBox2: TCheckBox
-      Left = 16
-      Top = 73
-      Width = 97
-      Height = 17
-      Caption = 'Internet'
-      TabOrder = 0
-    end
-    object CheckBox3: TCheckBox
-      Left = 16
-      Top = 50
-      Width = 97
-      Height = 17
-      Caption = 'Telefone'
-      TabOrder = 1
-    end
-    object CheckBox1: TCheckBox
-      Left = 16
-      Top = 27
-      Width = 97
-      Height = 17
-      Caption = 'Loja F'#237'sica'
-      TabOrder = 2
-    end
-  end
-  object Panel1: TPanel
-    Left = 32
-    Top = 67
+  object CadastroLivro: TGroupBox
+    Left = 8
+    Top = 8
     Width = 345
-    Height = 295
-    TabOrder = 6
+    Height = 235
+    Caption = 'Cadastro de Livro'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
     object Label2: TLabel
-      Left = 16
-      Top = 12
+      Left = 17
+      Top = 32
       Width = 80
       Height = 15
       Caption = 'Titulo do Livro'
@@ -134,8 +39,8 @@ object Form2: TForm2
       ParentFont = False
     end
     object Label3: TLabel
-      Left = 16
-      Top = 62
+      Left = 17
+      Top = 82
       Width = 32
       Height = 15
       Caption = 'Autor'
@@ -147,8 +52,8 @@ object Form2: TForm2
       ParentFont = False
     end
     object Label4: TLabel
-      Left = 16
-      Top = 112
+      Left = 17
+      Top = 132
       Width = 42
       Height = 15
       Caption = 'G'#234'nero'
@@ -159,11 +64,17 @@ object Form2: TForm2
       Font.Style = [fsBold]
       ParentFont = False
     end
-    object ComboBox2: TComboBox
-      Left = 16
-      Top = 133
+    object GENEROLIVRO: TComboBox
+      Left = 17
+      Top = 153
       Width = 177
       Height = 23
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 0
       Items.Strings = (
         'A'#231#227'o e aventura'
@@ -224,47 +135,254 @@ object Form2: TForm2
         'Casamentos'
         'Escrita e Publica'#231#227'o')
     end
-    object Edit1: TEdit
-      Left = 16
-      Top = 33
-      Width = 321
+    object TITULOLIVRO: TEdit
+      Left = 17
+      Top = 53
+      Width = 320
       Height = 23
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 1
     end
-    object Edit2: TEdit
+    object AUTORLIVRO: TEdit
       Left = 17
-      Top = 83
+      Top = 103
       Width = 321
       Height = 23
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 2
     end
-    object RadioGroup1: TRadioGroup
-      Left = 16
-      Top = 168
-      Width = 321
-      Height = 120
-      Caption = 'Idioma'
-      Columns = 3
+    object CheckBox4: TCheckBox
+      Left = 17
+      Top = 192
+      Width = 58
+      Height = 17
+      Caption = 'Ativo'
+      TabOrder = 3
+    end
+    object RadioButton1: TRadioButton
+      Left = 216
+      Top = 136
+      Width = 113
+      Height = 17
+      Caption = 'Novo'
+      TabOrder = 4
+    end
+    object RadioButton2: TRadioButton
+      Left = 216
+      Top = 159
+      Width = 113
+      Height = 17
+      Caption = 'Usado'
+      TabOrder = 5
+    end
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 378
+    Width = 711
+    Height = 41
+    Align = alBottom
+    TabOrder = 1
+    ExplicitLeft = -36
+    ExplicitTop = 393
+    ExplicitWidth = 745
+    object Button4: TButton
+      Left = 8
+      Top = 8
+      Width = 89
+      Height = 25
+      Caption = #10133' Novo'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -12
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
-      Items.Strings = (
-        'Alem'#227'o'
-        'Coreano'
-        'Espanhol'
-        'Franc'#234's'
-        'Hebr'#225'ico'
-        'Ingl'#234's'
-        'Italiano'
-        'Japones'
-        'Latim'
-        'Mandarim'
-        'Portugu'#234's'
-        'Russo')
+      ParentFont = False
+      TabOrder = 0
+    end
+    object Button5: TButton
+      Left = 103
+      Top = 8
+      Width = 89
+      Height = 25
+      Caption = #55357#56541' Alterar'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+    end
+    object Button6: TButton
+      Left = 198
+      Top = 8
+      Width = 89
+      Height = 25
+      Caption = #55357#56785' Excluir'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 2
+    end
+    object Button7: TButton
+      Left = 293
+      Top = 8
+      Width = 89
+      Height = 25
+      Caption = #55357#56590' Consultar'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 3
+    end
+    object Button8: TButton
+      Left = 608
+      Top = 8
+      Width = 89
+      Height = 25
+      Caption = #10060' Cancelar'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 4
+    end
+    object Button9: TButton
+      Left = 513
+      Top = 8
+      Width = 89
+      Height = 25
+      Caption = #10004' Salvar'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 5
+    end
+  end
+  object RadioGroup1: TRadioGroup
+    Left = 8
+    Top = 249
+    Width = 345
+    Height = 120
+    Caption = 'Idioma'
+    Columns = 3
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    Items.Strings = (
+      'Alem'#227'o'
+      'Coreano'
+      'Espanhol'
+      'Franc'#234's'
+      'Hebr'#225'ico'
+      'Ingl'#234's'
+      'Italiano'
+      'Japones'
+      'Latim'
+      'Mandarim'
+      'Portugu'#234's'
+      'Russo')
+    ParentFont = False
+    TabOrder = 2
+  end
+  object Resumo: TGroupBox
+    Left = 368
+    Top = 8
+    Width = 329
+    Height = 235
+    Caption = 'Resumo'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 3
+    object RESUMOLIVRO: TMemo
+      Left = 9
+      Top = 27
+      Width = 312
+      Height = 201
+      TabOrder = 0
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 368
+    Top = 249
+    Width = 170
+    Height = 120
+    Caption = 'Valor'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 4
+    object Label1: TLabel
+      Left = 17
+      Top = 21
+      Width = 31
+      Height = 15
+      Caption = 'Custo'
+    end
+    object Label5: TLabel
+      Left = 17
+      Top = 69
+      Width = 42
+      Height = 15
+      Caption = 'Aluguel'
+    end
+    object CUSTO: TEdit
+      Left = 16
+      Top = 39
+      Width = 121
+      Height = 23
+      TabOrder = 0
+    end
+    object VALORALUGUEL: TEdit
+      Left = 16
+      Top = 87
+      Width = 121
+      Height = 23
+      TabOrder = 1
+    end
+  end
+  object MainMenu1: TMainMenu
+    Left = 400
+    Top = 384
+    object Cadastro1: TMenuItem
+      Caption = 'Cadastro'
+    end
+    object Cadastro2: TMenuItem
+      Caption = 'Consulta'
+    end
+    object a1: TMenuItem
+      Caption = 'Alugados'
     end
   end
 end

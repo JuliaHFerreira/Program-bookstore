@@ -1,13 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2024/08/13 11:31:46.861,=C:\Users\WK19SPORTIVE\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2024/08/13 11:36:39.683,C:\Users\WK19SPORTIVE\Desktop\Delphi\Primeiro Projeto\UnitPrincipal.pas=C:\Users\WK19SPORTIVE\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2024/08/13 11:36:39.684,C:\Users\WK19SPORTIVE\Desktop\Delphi\Primeiro Projeto\UnitPrincipal.dfm=C:\Users\WK19SPORTIVE\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2024/08/13 11:37:33.978,C:\Users\WK19SPORTIVE\Desktop\Delphi\Primeiro Projeto\PrimeiroSistema.dproj=C:\Users\WK19SPORTIVE\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
-    <Transaction>2024/08/13 15:51:15.156,C:\Users\WK19SPORTIVE\Desktop\Delphi\Primeiro Projeto\Livraria.dproj=C:\Users\WK19SPORTIVE\Desktop\Delphi\Primeiro Projeto\PrimeiroSistema.dproj</Transaction>
-    <Transaction>2024/08/13 17:18:48.451,=C:\Users\WK19SPORTIVE\Desktop\Delphi\Primeiro Projeto\Unit2.pas</Transaction>
-    <Transaction>2024/08/13 17:24:04.048,C:\Users\WK19SPORTIVE\Desktop\Delphi\Primeiro Projeto\CadastroLivro.pas=C:\Users\WK19SPORTIVE\Desktop\Delphi\Primeiro Projeto\Unit2.pas</Transaction>
-    <Transaction>2024/08/13 17:24:04.048,C:\Users\WK19SPORTIVE\Desktop\Delphi\Primeiro Projeto\CadastroLivro.dfm=C:\Users\WK19SPORTIVE\Desktop\Delphi\Primeiro Projeto\Unit2.dfm</Transaction>
+	<Transactions>
+    <Transaction>2024/08/13 11:31:46.000.861,=C:\Users\WK19SPORTIVE\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/08/13 11:36:39.000.683,C:\Users\WK19SPORTIVE\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\WK19SPORTIVE\Desktop\Delphi\Primeiro Projeto\UnitPrincipal.pas</Transaction>
+    <Transaction>2024/08/13 11:36:39.000.684,C:\Users\WK19SPORTIVE\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\WK19SPORTIVE\Desktop\Delphi\Primeiro Projeto\UnitPrincipal.dfm</Transaction>
+    <Transaction>2024/08/13 11:37:33.000.978,C:\Users\WK19SPORTIVE\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\WK19SPORTIVE\Desktop\Delphi\Primeiro Projeto\PrimeiroSistema.dproj</Transaction>
+    <Transaction>2024/08/13 15:51:15.000.156,C:\Users\WK19SPORTIVE\Desktop\Delphi\Primeiro Projeto\PrimeiroSistema.dproj=C:\Users\WK19SPORTIVE\Desktop\Delphi\Primeiro Projeto\Livraria.dproj</Transaction>
+    <Transaction>2024/08/13 17:18:48.000.451,=C:\Users\WK19SPORTIVE\Desktop\Delphi\Primeiro Projeto\Unit2.pas</Transaction>
+    <Transaction>2024/08/13 17:24:04.000.048,C:\Users\WK19SPORTIVE\Desktop\Delphi\Primeiro Projeto\Unit2.dfm=C:\Users\WK19SPORTIVE\Desktop\Delphi\Primeiro Projeto\CadastroLivro.dfm</Transaction>
+    <Transaction>2024/08/13 17:24:04.000.048,C:\Users\WK19SPORTIVE\Desktop\Delphi\Primeiro Projeto\Unit2.pas=C:\Users\WK19SPORTIVE\Desktop\Delphi\Primeiro Projeto\CadastroLivro.pas</Transaction>
+    <Transaction>2024/08/14 11:33:10.781,=C:\Users\WK19SPORTIVE\Desktop\Delphi\Primeiro Projeto\Unit3.pas</Transaction>
+    <Transaction>2024/08/14 12:28:52.497,=C:\Users\WK19SPORTIVE\Desktop\Delphi\Primeiro Projeto\Unit3.pas</Transaction>
+    <Transaction>2024/08/14 12:30:19.520,=C:\Users\WK19SPORTIVE\Desktop\Delphi\Primeiro Projeto\Unit3.pas</Transaction>
+    <Transaction>2024/08/14 12:30:42.301,C:\Users\WK19SPORTIVE\Desktop\Delphi\Primeiro Projeto\CadastroCliente.pas=C:\Users\WK19SPORTIVE\Desktop\Delphi\Primeiro Projeto\Unit3.pas</Transaction>
+    <Transaction>2024/08/14 12:30:42.301,C:\Users\WK19SPORTIVE\Desktop\Delphi\Primeiro Projeto\CadastroCliente.dfm=C:\Users\WK19SPORTIVE\Desktop\Delphi\Primeiro Projeto\Unit3.dfm</Transaction>
   </Transactions>
 </BorlandProject>
