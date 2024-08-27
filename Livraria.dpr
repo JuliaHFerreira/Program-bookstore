@@ -3,8 +3,10 @@ program Livraria;
 uses
   Vcl.Forms,
   UnitPrincipal in 'UnitPrincipal.pas' {Form1},
-  CadastroLivro in 'CadastroLivro.pas' {Form2},
-  CadastroCliente in 'CadastroCliente.pas' {Form3};
+  CadastroLivro in 'CadastroLivro.pas' {FCadastroLivro},
+  CadastroCliente in 'CadastroCliente.pas' {FCadastroCliente},
+  ConsultarCliente in 'ConsultarCliente.pas' {TFConsultarClientes},
+  unitDM in 'unitDM.pas' {dm: TDataModule};
 
 {$R *.res}
 
@@ -12,7 +14,6 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TForm1, Form1);
-  Application.CreateForm(TForm2, Form2);
-  Application.CreateForm(TForm3, Form3);
+  Application.CreateForm(Tdm, dm);
   Application.Run;
 end.

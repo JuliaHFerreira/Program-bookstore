@@ -1,0 +1,18 @@
+program Livraria;
+
+uses
+  Vcl.Forms,
+  UnitPrincipal in 'UnitPrincipal.pas' {Form1},
+  CadastroLivro in 'CadastroLivro.pas' {FCadastroLivro},
+  CadastroCliente in 'CadastroCliente.pas' {FCadastroCliente},
+  ConsultarCliente in 'ConsultarCliente.pas' {ConsultarClientes};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TConsultarClientes, ConsultarClientes);
+  Application.Run;
+end.

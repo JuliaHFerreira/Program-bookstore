@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.ComCtrls,
-  Vcl.Menus;
+  Vcl.Menus, cadastroLivro, cadastroCliente, ConsultarCliente;
 
 type
   TForm1 = class(TForm)
@@ -29,6 +29,9 @@ type
     CriarnovoUsurio1: TMenuItem;
     rocardeUsurio1: TMenuItem;
     Alugados1: TMenuItem;
+    procedure Livros1Click(Sender: TObject);
+    procedure Clientes1Click(Sender: TObject);
+    procedure Clientes2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -41,5 +44,31 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TForm1.Clientes1Click(Sender: TObject);
+var
+  cadastroCliente:TFCadastroCliente;
+begin
+  cadastroCliente:=TFCadastroCliente.Create(self);
+  cadastroCliente.Show;
+
+end;
+
+procedure TForm1.Clientes2Click(Sender: TObject);
+var
+  consultarClientes:TTFConsultarClientes;
+begin
+  consultarClientes:=TTFConsultarClientes.Create(self);
+  consultarClientes.Show;
+end;
+
+procedure TForm1.Livros1Click(Sender: TObject);
+var
+  cadastroLivro:TFCadastroLivro;
+
+begin
+    cadastroLivro:=TFCadastroLivro.Create(self);
+    cadastroLivro.Show;
+end;
 
 end.

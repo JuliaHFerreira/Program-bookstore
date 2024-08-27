@@ -4,25 +4,22 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Menus, Vcl.ExtCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Menus, Vcl.ExtCtrls,
+  Vcl.ComCtrls, ConsultarCliente;
 
 type
-  TForm3 = class(TForm)
-    GroupBox1: TGroupBox;
-    MainMenu1: TMainMenu;
+  TFCadastroCliente = class(TForm)
+    DadosClienteBox: TGroupBox;
     Panel1: TPanel;
-    Cadastro1: TMenuItem;
-    Cadastro2: TMenuItem;
     Button1: TButton;
     Button2: TButton;
-    Button3: TButton;
     Button4: TButton;
     Button5: TButton;
     Button6: TButton;
-    GroupBox2: TGroupBox;
-    GroupBox5: TGroupBox;
-    GroupBox3: TGroupBox;
-    GroupBox4: TGroupBox;
+    ContatoBox: TGroupBox;
+    EnderecoBox: TGroupBox;
+    ObservacaoBox: TGroupBox;
+    HistoricoBox: TGroupBox;
     CODIGO: TEdit;
     Label1: TLabel;
     NOMECLIENTE: TEdit;
@@ -53,6 +50,10 @@ type
     Edit4: TEdit;
     Edit5: TEdit;
     Label14: TLabel;
+    TFCadastroCliente: TPageControl;
+    CadastroCliente: TTabSheet;
+    procedure Button5Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -60,10 +61,22 @@ type
   end;
 
 var
-  Form3: TForm3;
+  FCadastroCliente: TFCadastroCliente;
 
 implementation
 
 {$R *.dfm}
 
+procedure TFCadastroCliente.Button4Click(Sender: TObject);
+var
+  consultarClientes: TTFConsultarClientes;
+begin
+  consultarClientes:=TTFConsultarClientes.Create(self);
+  consultarClientes.Show;
+end;
+
+procedure TFCadastroCliente.Button5Click(Sender: TObject);
+begin
+  Application.Terminate;
+end;
 end.
