@@ -1,0 +1,122 @@
+object dm: Tdm
+  Height = 480
+  Width = 640
+  object BDConexao: TFDConnection
+    Params.Strings = (
+      'Database=livraria'
+      'User_Name=root'
+      'Server=127.0.0.1'
+      'DriverID=MySQL')
+    LoginPrompt = False
+    Left = 24
+    Top = 24
+  end
+  object TBContatos: TFDTable
+    IndexFieldNames = 'ID_CLIENTE'
+    Connection = BDConexao
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    TableName = 'livraria.clientes'
+    Left = 112
+    Top = 24
+    object TBContatosID_CLIENTE: TFDAutoIncField
+      FieldName = 'ID_CLIENTE'
+      Origin = 'ID_CLIENTE'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = False
+    end
+    object TBContatosNOME_CLIENTE: TStringField
+      FieldName = 'NOME_CLIENTE'
+      Origin = 'NOME_CLIENTE'
+      Required = True
+      Size = 60
+    end
+    object TBContatosRG: TStringField
+      FieldName = 'RG'
+      Origin = 'RG'
+      Required = True
+      Size = 10
+    end
+    object TBContatosCPF: TStringField
+      FieldName = 'CPF'
+      Origin = 'CPF'
+      Required = True
+      Size = 11
+    end
+    object TBContatosDATA_NASCIMENTO: TDateField
+      FieldName = 'DATA_NASCIMENTO'
+      Origin = 'DATA_NASCIMENTO'
+      Required = True
+    end
+    object TBContatosTELEFONE_FIXO: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'TELEFONE_FIXO'
+      Origin = 'TELEFONE_FIXO'
+      Size = 14
+    end
+    object TBContatosCELULAR: TStringField
+      FieldName = 'CELULAR'
+      Origin = 'CELULAR'
+      Required = True
+      Size = 15
+    end
+    object TBContatosEMAIL: TStringField
+      FieldName = 'EMAIL'
+      Origin = 'EMAIL'
+      Required = True
+      Size = 100
+    end
+    object TBContatosCEP: TStringField
+      FieldName = 'CEP'
+      Origin = 'CEP'
+      Required = True
+      Size = 9
+    end
+    object TBContatosRUA: TStringField
+      FieldName = 'RUA'
+      Origin = 'RUA'
+      Required = True
+      Size = 60
+    end
+    object TBContatosNUMERO: TStringField
+      FieldName = 'NUMERO'
+      Origin = 'NUMERO'
+      Required = True
+      Size = 10
+    end
+    object TBContatosBAIRRO: TStringField
+      FieldName = 'BAIRRO'
+      Origin = 'BAIRRO'
+      Required = True
+      Size = 60
+    end
+    object TBContatosCIDADE: TStringField
+      FieldName = 'CIDADE'
+      Origin = 'CIDADE'
+      Required = True
+      Size = 60
+    end
+    object TBContatosESTADO: TStringField
+      FieldName = 'ESTADO'
+      Origin = 'ESTADO'
+      Required = True
+      Size = 60
+    end
+    object TBContatosOBSERVACAO: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'OBSERVACAO'
+      Origin = 'OBSERVACAO'
+      Size = 255
+    end
+    object TBContatosHISTORICO: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'HISTORICO'
+      Origin = 'HISTORICO'
+      Size = 255
+    end
+  end
+  object DSContatos: TDataSource
+    DataSet = TBContatos
+    Left = 112
+    Top = 96
+  end
+end

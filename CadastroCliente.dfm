@@ -19,7 +19,7 @@ object FCadastroCliente: TFCadastroCliente
     Height = 41
     Align = alBottom
     TabOrder = 0
-    object Button1: TButton
+    object NOVO: TButton
       Left = 8
       Top = 8
       Width = 89
@@ -32,8 +32,9 @@ object FCadastroCliente: TFCadastroCliente
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 0
+      OnClick = NOVOClick
     end
-    object Button2: TButton
+    object ALTERAR: TButton
       Left = 103
       Top = 8
       Width = 89
@@ -47,7 +48,7 @@ object FCadastroCliente: TFCadastroCliente
       ParentFont = False
       TabOrder = 1
     end
-    object Button4: TButton
+    object CONSULTAR: TButton
       Left = 199
       Top = 8
       Width = 89
@@ -60,9 +61,9 @@ object FCadastroCliente: TFCadastroCliente
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 2
-      OnClick = Button4Click
+      OnClick = CONSULTARClick
     end
-    object Button5: TButton
+    object CANCELAR: TButton
       Left = 648
       Top = 8
       Width = 89
@@ -76,9 +77,9 @@ object FCadastroCliente: TFCadastroCliente
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 3
-      OnClick = Button5Click
+      OnClick = CANCELARClick
     end
-    object Button6: TButton
+    object SALVAR: TButton
       Left = 553
       Top = 8
       Width = 89
@@ -91,6 +92,7 @@ object FCadastroCliente: TFCadastroCliente
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 4
+      OnClick = SALVARClick
     end
   end
   object TFCadastroCliente: TPageControl
@@ -157,69 +159,49 @@ object FCadastroCliente: TFCadastroCliente
           Height = 15
           Caption = 'Data Nascimento'
         end
-        object CODIGO: TEdit
+        object CODIGO: TDBEdit
           Left = 13
           Top = 48
-          Width = 76
+          Width = 79
           Height = 23
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
+          DataField = 'ID_CLIENTE'
+          DataSource = dm.DSCliente
           TabOrder = 0
         end
-        object NOMECLIENTE: TEdit
+        object NOMECLIENTE: TDBEdit
           Left = 98
           Top = 48
           Width = 311
           Height = 23
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
+          DataField = 'NOME_CLIENTE'
+          DataSource = dm.DSCliente
           TabOrder = 1
         end
-        object RG: TEdit
+        object RG: TDBEdit
           Left = 13
           Top = 96
-          Width = 84
+          Width = 87
           Height = 23
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
+          DataField = 'RG'
+          DataSource = dm.DSCliente
           TabOrder = 2
         end
-        object CPF: TEdit
+        object CPF: TDBEdit
           Left = 106
           Top = 96
-          Width = 191
+          Width = 193
           Height = 23
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
+          DataField = 'CPF'
+          DataSource = dm.DSCliente
           TabOrder = 3
         end
-        object DATANASCIMENTO: TEdit
+        object DATANASCIMENTO: TDBEdit
           Left = 305
           Top = 96
           Width = 104
           Height = 23
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
+          DataField = 'DATA_NASCIMENTO'
+          DataSource = dm.DSCliente
           TabOrder = 4
         end
       end
@@ -263,43 +245,31 @@ object FCadastroCliente: TFCadastroCliente
           Height = 15
           Caption = 'Celular'
         end
-        object TELEFONEFIXO: TEdit
-          Left = 13
-          Top = 45
-          Width = 113
-          Height = 23
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-          TabOrder = 0
-        end
-        object EMAIL: TEdit
+        object EMAIL: TDBEdit
           Left = 13
           Top = 95
           Width = 361
           Height = 23
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
+          DataField = 'EMAIL'
+          DataSource = dm.DSCliente
+          TabOrder = 0
+        end
+        object CELULAR: TDBEdit
+          Left = 136
+          Top = 45
+          Width = 121
+          Height = 23
+          DataField = 'CELULAR'
+          DataSource = dm.DSCliente
           TabOrder = 1
         end
-        object CELULAR: TEdit
-          Left = 136
+        object TELEFONEFIXO: TDBEdit
+          Left = 13
           Top = 45
           Width = 113
           Height = 23
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
+          DataField = 'TELEFONE_FIXO'
+          DataSource = dm.DSCliente
           TabOrder = 2
         end
       end
@@ -316,17 +286,13 @@ object FCadastroCliente: TFCadastroCliente
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 2
-        object OBSERVACAO: TMemo
+        object OBSERVACAO: TDBMemo
           Left = 6
           Top = 21
           Width = 293
           Height = 117
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
+          DataField = 'OBSERVACAO'
+          DataSource = dm.DSCliente
           TabOrder = 0
         end
       end
@@ -343,17 +309,13 @@ object FCadastroCliente: TFCadastroCliente
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 3
-        object HISTORICO: TMemo
+        object HISTORICO: TDBMemo
           Left = 6
           Top = 16
           Width = 292
           Height = 225
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
+          DataField = 'HISTORICO'
+          DataSource = dm.DSCliente
           TabOrder = 0
         end
       end
@@ -418,82 +380,58 @@ object FCadastroCliente: TFCadastroCliente
           Height = 15
           Caption = 'Estado'
         end
-        object CEP: TEdit
+        object CEP: TDBEdit
           Left = 13
           Top = 45
           Width = 100
           Height = 23
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
+          DataField = 'CEP'
+          DataSource = dm.DSCliente
           TabOrder = 0
         end
-        object Edit1: TEdit
+        object RUA: TDBEdit
           Left = 119
           Top = 45
           Width = 290
           Height = 23
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
+          DataField = 'RUA'
+          DataSource = dm.DSCliente
           TabOrder = 1
         end
-        object Edit2: TEdit
+        object NUMERO: TDBEdit
           Left = 13
           Top = 93
           Width = 60
           Height = 23
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
+          DataField = 'NUMERO'
+          DataSource = dm.DSCliente
           TabOrder = 2
         end
-        object Edit3: TEdit
+        object BAIRRO: TDBEdit
           Left = 81
           Top = 93
           Width = 95
           Height = 23
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
+          DataField = 'BAIRRO'
+          DataSource = dm.DSCliente
           TabOrder = 3
         end
-        object Edit4: TEdit
+        object CIDADE: TDBEdit
           Left = 182
           Top = 93
           Width = 109
           Height = 23
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
+          DataField = 'CIDADE'
+          DataSource = dm.DSCliente
           TabOrder = 4
         end
-        object Edit5: TEdit
+        object ESTADO: TDBEdit
           Left = 297
           Top = 93
           Width = 112
           Height = 23
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
+          DataField = 'ESTADO'
+          DataSource = dm.DSCliente
           TabOrder = 5
         end
       end

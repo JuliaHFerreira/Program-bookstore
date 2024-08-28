@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Menus,
-  Vcl.ComCtrls;
+  Vcl.ComCtrls, Vcl.Mask, Vcl.DBCtrls;
 
 type
   TFCadastroLivro = class(TForm)
@@ -36,6 +36,7 @@ type
     Label5: TLabel;
     CUSTO: TEdit;
     VALORALUGUEL: TEdit;
+    DBEdit1: TDBEdit;
   private
     { Private declarations }
   public

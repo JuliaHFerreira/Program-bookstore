@@ -1,0 +1,437 @@
+object FCadastroCliente: TFCadastroCliente
+  Left = 0
+  Top = 0
+  Caption = 'Cadastro Cliente'
+  ClientHeight = 485
+  ClientWidth = 745
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Visible = True
+  TextHeight = 15
+  object Panel1: TPanel
+    Left = 0
+    Top = 444
+    Width = 745
+    Height = 41
+    Align = alBottom
+    TabOrder = 0
+    object NOVO: TButton
+      Left = 8
+      Top = 8
+      Width = 89
+      Height = 25
+      Caption = #10133' Novo'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+    end
+    object ALTERAR: TButton
+      Left = 103
+      Top = 8
+      Width = 89
+      Height = 25
+      Caption = #55357#56541' Alterar'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+    end
+    object CONSULTAR: TButton
+      Left = 199
+      Top = 8
+      Width = 89
+      Height = 25
+      Caption = #55357#56590' Consultar'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 2
+    end
+    object CANCELAR: TButton
+      Left = 648
+      Top = 8
+      Width = 89
+      Height = 25
+      Cursor = crHandPoint
+      Caption = #10060' Cancelar'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 3
+      OnClick = CANCELARClick
+    end
+    object SALVAR: TButton
+      Left = 553
+      Top = 8
+      Width = 89
+      Height = 25
+      Caption = #10004' Salvar'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 4
+    end
+  end
+  object TFCadastroCliente: TPageControl
+    Left = 0
+    Top = 0
+    Width = 745
+    Height = 444
+    ActivePage = CadastroCliente
+    Align = alClient
+    TabOrder = 1
+    object CadastroCliente: TTabSheet
+      Caption = 'Cadastro de Clientes'
+      object DadosClienteBox: TGroupBox
+        Left = 5
+        Top = 5
+        Width = 418
+        Height = 132
+        Caption = 'Dados Cliente'
+        DefaultHeaderFont = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        HeaderFont.Charset = DEFAULT_CHARSET
+        HeaderFont.Color = clWindowText
+        HeaderFont.Height = -12
+        HeaderFont.Name = 'Segoe UI'
+        HeaderFont.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 0
+        object Label1: TLabel
+          Left = 13
+          Top = 27
+          Width = 39
+          Height = 15
+          Caption = 'C'#243'digo'
+        end
+        object Label2: TLabel
+          Left = 98
+          Top = 27
+          Width = 89
+          Height = 15
+          Caption = 'Nome Completo'
+        end
+        object Label3: TLabel
+          Left = 13
+          Top = 77
+          Width = 15
+          Height = 15
+          Caption = 'RG'
+        end
+        object Label4: TLabel
+          Left = 106
+          Top = 77
+          Width = 21
+          Height = 15
+          Caption = 'CPF'
+        end
+        object Label5: TLabel
+          Left = 305
+          Top = 77
+          Width = 91
+          Height = 15
+          Caption = 'Data Nascimento'
+        end
+        object CODIGO: TDBEdit
+          Left = 13
+          Top = 48
+          Width = 79
+          Height = 23
+          DataField = 'ID_CLIENTE'
+          DataSource = dm.DSContatos
+          TabOrder = 0
+        end
+        object NOMECLIENTE: TDBEdit
+          Left = 98
+          Top = 48
+          Width = 311
+          Height = 23
+          DataField = 'NOME_CLIENTE'
+          DataSource = dm.DSContatos
+          TabOrder = 1
+        end
+        object RG: TDBEdit
+          Left = 13
+          Top = 96
+          Width = 87
+          Height = 23
+          DataField = 'RG'
+          DataSource = dm.DSContatos
+          TabOrder = 2
+        end
+        object CPF: TDBEdit
+          Left = 106
+          Top = 96
+          Width = 193
+          Height = 23
+          DataField = 'CPF'
+          DataSource = dm.DSContatos
+          TabOrder = 3
+        end
+        object DATANASCIMENTO: TDBEdit
+          Left = 305
+          Top = 96
+          Width = 104
+          Height = 23
+          DataField = 'DATA_NASCIMENTO'
+          DataSource = dm.DSContatos
+          TabOrder = 4
+        end
+      end
+      object ContatoBox: TGroupBox
+        Left = 5
+        Top = 145
+        Width = 418
+        Height = 130
+        Caption = 'Contato'
+        DefaultHeaderFont = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        HeaderFont.Charset = DEFAULT_CHARSET
+        HeaderFont.Color = clWindowText
+        HeaderFont.Height = -12
+        HeaderFont.Name = 'Segoe UI'
+        HeaderFont.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 1
+        object Label6: TLabel
+          Left = 13
+          Top = 26
+          Width = 69
+          Height = 15
+          Caption = 'Telefone Fixo'
+        end
+        object Label7: TLabel
+          Left = 13
+          Top = 74
+          Width = 34
+          Height = 15
+          Caption = 'E-mail'
+        end
+        object Label8: TLabel
+          Left = 136
+          Top = 26
+          Width = 37
+          Height = 15
+          Caption = 'Celular'
+        end
+        object EMAIL: TDBEdit
+          Left = 13
+          Top = 95
+          Width = 361
+          Height = 23
+          DataField = 'EMAIL'
+          DataSource = dm.DSContatos
+          TabOrder = 0
+        end
+        object CELULAR: TDBEdit
+          Left = 136
+          Top = 45
+          Width = 121
+          Height = 23
+          DataField = 'CELULAR'
+          DataSource = dm.DSContatos
+          TabOrder = 1
+        end
+        object TELEFONEFIXO: TDBEdit
+          Left = 13
+          Top = 45
+          Width = 113
+          Height = 23
+          DataField = 'TELEFONE_FIXO'
+          DataSource = dm.DSContatos
+          TabOrder = 2
+        end
+      end
+      object ObservacaoBox: TGroupBox
+        Left = 429
+        Top = 263
+        Width = 305
+        Height = 144
+        Caption = 'Observa'#231#227'o'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 2
+        object OBSERVACAO: TDBMemo
+          Left = 6
+          Top = 21
+          Width = 293
+          Height = 117
+          DataField = 'OBSERVACAO'
+          DataSource = dm.DSContatos
+          TabOrder = 0
+        end
+      end
+      object HistoricoBox: TGroupBox
+        Left = 429
+        Top = 5
+        Width = 305
+        Height = 251
+        Caption = 'Historico'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 3
+        object HISTORICO: TDBMemo
+          Left = 6
+          Top = 16
+          Width = 292
+          Height = 225
+          DataField = 'HISTORICO'
+          DataSource = dm.DSContatos
+          TabOrder = 0
+        end
+      end
+      object EnderecoBox: TGroupBox
+        Left = 5
+        Top = 279
+        Width = 418
+        Height = 128
+        Caption = 'Endere'#231'o'
+        DefaultHeaderFont = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        HeaderFont.Charset = DEFAULT_CHARSET
+        HeaderFont.Color = clWindowText
+        HeaderFont.Height = -12
+        HeaderFont.Name = 'Segoe UI'
+        HeaderFont.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 4
+        object Label9: TLabel
+          Left = 13
+          Top = 26
+          Width = 21
+          Height = 15
+          Caption = 'CEP'
+        end
+        object Label10: TLabel
+          Left = 119
+          Top = 26
+          Width = 20
+          Height = 15
+          Caption = 'Rua'
+        end
+        object Label11: TLabel
+          Left = 13
+          Top = 74
+          Width = 44
+          Height = 15
+          Caption = 'N'#250'mero'
+        end
+        object Label12: TLabel
+          Left = 81
+          Top = 74
+          Width = 31
+          Height = 15
+          Caption = 'Bairro'
+        end
+        object Label13: TLabel
+          Left = 182
+          Top = 74
+          Width = 37
+          Height = 15
+          Caption = 'Cidade'
+        end
+        object Label14: TLabel
+          Left = 297
+          Top = 74
+          Width = 35
+          Height = 15
+          Caption = 'Estado'
+        end
+        object CEP: TDBEdit
+          Left = 13
+          Top = 45
+          Width = 100
+          Height = 23
+          DataField = 'CEP'
+          DataSource = dm.DSContatos
+          TabOrder = 0
+        end
+        object RUA: TDBEdit
+          Left = 119
+          Top = 45
+          Width = 290
+          Height = 23
+          DataField = 'RUA'
+          DataSource = dm.DSContatos
+          TabOrder = 1
+        end
+        object NUMERO: TDBEdit
+          Left = 13
+          Top = 93
+          Width = 60
+          Height = 23
+          DataField = 'NUMERO'
+          DataSource = dm.DSContatos
+          TabOrder = 2
+        end
+        object BAIRRO: TDBEdit
+          Left = 81
+          Top = 93
+          Width = 95
+          Height = 23
+          DataField = 'BAIRRO'
+          DataSource = dm.DSContatos
+          TabOrder = 3
+        end
+        object CIDADE: TDBEdit
+          Left = 182
+          Top = 93
+          Width = 109
+          Height = 23
+          DataField = 'CIDADE'
+          DataSource = dm.DSContatos
+          TabOrder = 4
+        end
+        object ESTADO: TDBEdit
+          Left = 297
+          Top = 93
+          Width = 112
+          Height = 23
+          DataField = 'ESTADO'
+          DataSource = dm.DSContatos
+          TabOrder = 5
+        end
+      end
+    end
+  end
+end

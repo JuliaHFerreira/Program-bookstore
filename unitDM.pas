@@ -13,24 +13,24 @@ uses
 type
   Tdm = class(TDataModule)
     BDConexao: TFDConnection;
-    TBContatos: TFDTable;
-    DSContatos: TDataSource;
-    TBContatosID_CLIENTE: TFDAutoIncField;
-    TBContatosNOME_CLIENTE: TStringField;
-    TBContatosRG: TStringField;
-    TBContatosCPF: TStringField;
-    TBContatosDATA_NASCIMENTO: TDateField;
-    TBContatosTELEFONE_FIXO: TStringField;
-    TBContatosCELULAR: TStringField;
-    TBContatosEMAIL: TStringField;
-    TBContatosCEP: TStringField;
-    TBContatosRUA: TStringField;
-    TBContatosNUMERO: TStringField;
-    TBContatosBAIRRO: TStringField;
-    TBContatosCIDADE: TStringField;
-    TBContatosESTADO: TStringField;
-    TBContatosOBSERVACAO: TStringField;
-    TBContatosHISTORICO: TStringField;
+    TBClientes: TFDTable;
+    DSCliente: TDataSource;
+    TBClientesID_CLIENTE: TFDAutoIncField;
+    TBClientesNOME_CLIENTE: TStringField;
+    TBClientesRG: TStringField;
+    TBClientesCPF: TStringField;
+    TBClientesDATA_NASCIMENTO: TDateField;
+    TBClientesTELEFONE_FIXO: TStringField;
+    TBClientesCELULAR: TStringField;
+    TBClientesEMAIL: TStringField;
+    TBClientesCEP: TStringField;
+    TBClientesRUA: TStringField;
+    TBClientesNUMERO: TStringField;
+    TBClientesBAIRRO: TStringField;
+    TBClientesCIDADE: TStringField;
+    TBClientesESTADO: TStringField;
+    TBClientesOBSERVACAO: TStringField;
+    TBClientesHISTORICO: TStringField;
   private
     { Private declarations }
   public

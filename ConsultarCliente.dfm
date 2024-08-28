@@ -18,7 +18,6 @@ object TFConsultarClientes: TTFConsultarClientes
     Height = 41
     Align = alBottom
     TabOrder = 0
-    ExplicitTop = 443
     object Button2: TButton
       Left = 8
       Top = 8
@@ -91,411 +90,97 @@ object TFConsultarClientes: TTFConsultarClientes
       TabOrder = 4
     end
   end
-  object TFConsultarCliente: TPageControl
+  object DBGrid1: TDBGrid
     Left = 0
-    Top = 0
+    Top = 64
     Width = 745
-    Height = 444
-    ActivePage = ConsultarClientes
-    Align = alClient
+    Height = 374
+    DataSource = dm.DSCliente
     TabOrder = 1
-    ExplicitHeight = 443
-    object ConsultarClientes: TTabSheet
-      Caption = 'Consulta de Clientes'
-      object DadosClienteBox: TGroupBox
-        Left = 5
-        Top = 5
-        Width = 418
-        Height = 132
-        Caption = 'Dados Cliente'
-        DefaultHeaderFont = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        HeaderFont.Charset = DEFAULT_CHARSET
-        HeaderFont.Color = clWindowText
-        HeaderFont.Height = -12
-        HeaderFont.Name = 'Segoe UI'
-        HeaderFont.Style = [fsBold]
-        ParentFont = False
-        TabOrder = 0
-        object Label1: TLabel
-          Left = 13
-          Top = 27
-          Width = 39
-          Height = 15
-          Caption = 'C'#243'digo'
-        end
-        object Label2: TLabel
-          Left = 98
-          Top = 27
-          Width = 89
-          Height = 15
-          Caption = 'Nome Completo'
-        end
-        object Label3: TLabel
-          Left = 13
-          Top = 77
-          Width = 15
-          Height = 15
-          Caption = 'RG'
-        end
-        object Label4: TLabel
-          Left = 106
-          Top = 77
-          Width = 21
-          Height = 15
-          Caption = 'CPF'
-        end
-        object Label5: TLabel
-          Left = 305
-          Top = 77
-          Width = 91
-          Height = 15
-          Caption = 'Data Nascimento'
-        end
-        object CODIGO: TEdit
-          Left = 13
-          Top = 48
-          Width = 76
-          Height = 23
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-          TabOrder = 0
-        end
-        object NOMECLIENTE: TEdit
-          Left = 98
-          Top = 48
-          Width = 311
-          Height = 23
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-          TabOrder = 1
-        end
-        object RG: TEdit
-          Left = 13
-          Top = 96
-          Width = 84
-          Height = 23
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-          TabOrder = 2
-        end
-        object CPF: TEdit
-          Left = 106
-          Top = 96
-          Width = 191
-          Height = 23
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-          TabOrder = 3
-        end
-        object DATANASCIMENTO: TEdit
-          Left = 305
-          Top = 96
-          Width = 104
-          Height = 23
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-          TabOrder = 4
-        end
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -12
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'ID_CLIENTE'
+        Title.Caption = 'ID'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = [fsBold]
+        Visible = True
       end
-      object ContatoBox: TGroupBox
-        Left = 5
-        Top = 145
-        Width = 418
-        Height = 130
-        Caption = 'Contato'
-        DefaultHeaderFont = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        HeaderFont.Charset = DEFAULT_CHARSET
-        HeaderFont.Color = clWindowText
-        HeaderFont.Height = -12
-        HeaderFont.Name = 'Segoe UI'
-        HeaderFont.Style = [fsBold]
-        ParentFont = False
-        TabOrder = 1
-        object Label6: TLabel
-          Left = 13
-          Top = 26
-          Width = 69
-          Height = 15
-          Caption = 'Telefone Fixo'
-        end
-        object Label7: TLabel
-          Left = 13
-          Top = 74
-          Width = 34
-          Height = 15
-          Caption = 'E-mail'
-        end
-        object Label8: TLabel
-          Left = 136
-          Top = 26
-          Width = 37
-          Height = 15
-          Caption = 'Celular'
-        end
-        object TELEFONEFIXO: TEdit
-          Left = 13
-          Top = 45
-          Width = 113
-          Height = 23
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-          TabOrder = 0
-        end
-        object EMAIL: TEdit
-          Left = 13
-          Top = 95
-          Width = 361
-          Height = 23
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-          TabOrder = 1
-        end
-        object CELULAR: TEdit
-          Left = 136
-          Top = 45
-          Width = 113
-          Height = 23
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-          TabOrder = 2
-        end
+      item
+        Expanded = False
+        FieldName = 'NOME_CLIENTE'
+        Title.Caption = 'NOME CLIENTE'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = [fsBold]
+        Visible = True
       end
-      object ObservacaoBox: TGroupBox
-        Left = 429
-        Top = 263
-        Width = 305
-        Height = 144
-        Caption = 'Observa'#231#227'o'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Segoe UI'
-        Font.Style = [fsBold]
-        ParentFont = False
-        TabOrder = 2
-        object OBSERVACAO: TMemo
-          Left = 6
-          Top = 21
-          Width = 293
-          Height = 117
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-          TabOrder = 0
-        end
+      item
+        Expanded = False
+        FieldName = 'CPF'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = [fsBold]
+        Visible = True
       end
-      object HistoricoBox: TGroupBox
-        Left = 429
-        Top = 5
-        Width = 305
-        Height = 251
-        Caption = 'Historico'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Segoe UI'
-        Font.Style = [fsBold]
-        ParentFont = False
-        TabOrder = 3
-        object HISTORICO: TMemo
-          Left = 6
-          Top = 16
-          Width = 292
-          Height = 225
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-          TabOrder = 0
-        end
+      item
+        Expanded = False
+        FieldName = 'DATA_NASCIMENTO'
+        Title.Caption = 'DATA NASCIMENTO'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = [fsBold]
+        Width = 127
+        Visible = True
       end
-      object EnderecoBox: TGroupBox
-        Left = 5
-        Top = 281
-        Width = 418
-        Height = 128
-        Caption = 'Endere'#231'o'
-        DefaultHeaderFont = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        HeaderFont.Charset = DEFAULT_CHARSET
-        HeaderFont.Color = clWindowText
-        HeaderFont.Height = -12
-        HeaderFont.Name = 'Segoe UI'
-        HeaderFont.Style = [fsBold]
-        ParentFont = False
-        TabOrder = 4
-        object Label9: TLabel
-          Left = 13
-          Top = 26
-          Width = 21
-          Height = 15
-          Caption = 'CEP'
-        end
-        object Label10: TLabel
-          Left = 119
-          Top = 26
-          Width = 20
-          Height = 15
-          Caption = 'Rua'
-        end
-        object Label11: TLabel
-          Left = 13
-          Top = 74
-          Width = 44
-          Height = 15
-          Caption = 'N'#250'mero'
-        end
-        object Label12: TLabel
-          Left = 81
-          Top = 74
-          Width = 31
-          Height = 15
-          Caption = 'Bairro'
-        end
-        object Label13: TLabel
-          Left = 182
-          Top = 74
-          Width = 37
-          Height = 15
-          Caption = 'Cidade'
-        end
-        object Label14: TLabel
-          Left = 297
-          Top = 74
-          Width = 35
-          Height = 15
-          Caption = 'Estado'
-        end
-        object CEP: TEdit
-          Left = 13
-          Top = 45
-          Width = 100
-          Height = 23
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-          TabOrder = 0
-        end
-        object Edit1: TEdit
-          Left = 119
-          Top = 45
-          Width = 290
-          Height = 23
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-          TabOrder = 1
-        end
-        object Edit2: TEdit
-          Left = 13
-          Top = 93
-          Width = 60
-          Height = 23
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-          TabOrder = 2
-        end
-        object Edit3: TEdit
-          Left = 81
-          Top = 93
-          Width = 95
-          Height = 23
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-          TabOrder = 3
-        end
-        object Edit4: TEdit
-          Left = 182
-          Top = 93
-          Width = 109
-          Height = 23
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-          TabOrder = 4
-        end
-        object Edit5: TEdit
-          Left = 297
-          Top = 93
-          Width = 112
-          Height = 23
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-          TabOrder = 5
-        end
-      end
+      item
+        Expanded = False
+        FieldName = 'CELULAR'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end>
+  end
+  object GroupBox1: TGroupBox
+    Left = 8
+    Top = 8
+    Width = 337
+    Height = 50
+    Caption = 'Busca'
+    Color = clCream
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentBackground = False
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 2
+    object txtBusca: TEdit
+      Left = 12
+      Top = 19
+      Width = 316
+      Height = 23
+      TabOrder = 0
+      OnChange = txtBuscaChange
     end
   end
 end
