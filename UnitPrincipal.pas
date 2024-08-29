@@ -21,7 +21,6 @@ type
     Livros1: TMenuItem;
     N2: TMenuItem;
     Consultas1: TMenuItem;
-    Clientes2: TMenuItem;
     Clientes3: TMenuItem;
     Autores1: TMenuItem;
     N3: TMenuItem;

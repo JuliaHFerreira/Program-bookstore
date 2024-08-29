@@ -159,48 +159,40 @@ object FCadastroCliente: TFCadastroCliente
           Height = 15
           Caption = 'Data Nascimento'
         end
+        object NOMECLIENTE: TEdit
+          Left = 98
+          Top = 48
+          Width = 311
+          Height = 23
+          TabOrder = 0
+        end
+        object RG: TEdit
+          Left = 13
+          Top = 96
+          Width = 87
+          Height = 23
+          TabOrder = 1
+        end
+        object CPF: TEdit
+          Left = 106
+          Top = 96
+          Width = 193
+          Height = 23
+          TabOrder = 2
+        end
+        object DATANASCIMENTO: TEdit
+          Left = 305
+          Top = 96
+          Width = 104
+          Height = 23
+          TabOrder = 3
+        end
         object CODIGO: TDBEdit
           Left = 13
           Top = 48
           Width = 79
           Height = 23
           DataField = 'ID_CLIENTE'
-          DataSource = dm.DSCliente
-          TabOrder = 0
-        end
-        object NOMECLIENTE: TDBEdit
-          Left = 98
-          Top = 48
-          Width = 311
-          Height = 23
-          DataField = 'NOME_CLIENTE'
-          DataSource = dm.DSCliente
-          TabOrder = 1
-        end
-        object RG: TDBEdit
-          Left = 13
-          Top = 96
-          Width = 87
-          Height = 23
-          DataField = 'RG'
-          DataSource = dm.DSCliente
-          TabOrder = 2
-        end
-        object CPF: TDBEdit
-          Left = 106
-          Top = 96
-          Width = 193
-          Height = 23
-          DataField = 'CPF'
-          DataSource = dm.DSCliente
-          TabOrder = 3
-        end
-        object DATANASCIMENTO: TDBEdit
-          Left = 305
-          Top = 96
-          Width = 104
-          Height = 23
-          DataField = 'DATA_NASCIMENTO'
           DataSource = dm.DSCliente
           TabOrder = 4
         end
@@ -245,31 +237,25 @@ object FCadastroCliente: TFCadastroCliente
           Height = 15
           Caption = 'Celular'
         end
-        object EMAIL: TDBEdit
-          Left = 13
-          Top = 95
-          Width = 361
-          Height = 23
-          DataField = 'EMAIL'
-          DataSource = dm.DSCliente
-          TabOrder = 0
-        end
-        object CELULAR: TDBEdit
-          Left = 136
-          Top = 45
-          Width = 121
-          Height = 23
-          DataField = 'CELULAR'
-          DataSource = dm.DSCliente
-          TabOrder = 1
-        end
-        object TELEFONEFIXO: TDBEdit
+        object TELEFONEFIXO: TEdit
           Left = 13
           Top = 45
           Width = 113
           Height = 23
-          DataField = 'TELEFONE_FIXO'
-          DataSource = dm.DSCliente
+          TabOrder = 0
+        end
+        object CELULAR: TEdit
+          Left = 136
+          Top = 45
+          Width = 121
+          Height = 23
+          TabOrder = 1
+        end
+        object EMAIL: TEdit
+          Left = 13
+          Top = 95
+          Width = 361
+          Height = 23
           TabOrder = 2
         end
       end
@@ -286,13 +272,11 @@ object FCadastroCliente: TFCadastroCliente
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 2
-        object OBSERVACAO: TDBMemo
+        object OBSERVACAO: TMemo
           Left = 6
           Top = 21
           Width = 293
           Height = 117
-          DataField = 'OBSERVACAO'
-          DataSource = dm.DSCliente
           TabOrder = 0
         end
       end
@@ -309,13 +293,11 @@ object FCadastroCliente: TFCadastroCliente
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 3
-        object HISTORICO: TDBMemo
+        object HISTORICO: TMemo
           Left = 6
           Top = 16
           Width = 292
           Height = 225
-          DataField = 'HISTORICO'
-          DataSource = dm.DSCliente
           TabOrder = 0
         end
       end
@@ -373,65 +355,53 @@ object FCadastroCliente: TFCadastroCliente
           Height = 15
           Caption = 'Cidade'
         end
-        object Label14: TLabel
+        object Edit12: TLabel
           Left = 297
           Top = 74
           Width = 35
           Height = 15
           Caption = 'Estado'
         end
-        object CEP: TDBEdit
+        object CEP: TEdit
           Left = 13
           Top = 45
           Width = 100
           Height = 23
-          DataField = 'CEP'
-          DataSource = dm.DSCliente
           TabOrder = 0
         end
-        object RUA: TDBEdit
+        object RUA: TEdit
           Left = 119
           Top = 45
           Width = 290
           Height = 23
-          DataField = 'RUA'
-          DataSource = dm.DSCliente
           TabOrder = 1
         end
-        object NUMERO: TDBEdit
+        object NUMERO: TEdit
           Left = 13
           Top = 93
           Width = 60
           Height = 23
-          DataField = 'NUMERO'
-          DataSource = dm.DSCliente
           TabOrder = 2
         end
-        object BAIRRO: TDBEdit
-          Left = 81
+        object BAIRRO: TEdit
+          Left = 79
           Top = 93
           Width = 95
           Height = 23
-          DataField = 'BAIRRO'
-          DataSource = dm.DSCliente
           TabOrder = 3
         end
-        object CIDADE: TDBEdit
+        object CIDADE: TEdit
           Left = 182
           Top = 93
           Width = 109
           Height = 23
-          DataField = 'CIDADE'
-          DataSource = dm.DSCliente
           TabOrder = 4
         end
-        object ESTADO: TDBEdit
+        object ESTADO: TEdit
           Left = 297
           Top = 93
           Width = 112
           Height = 23
-          DataField = 'ESTADO'
-          DataSource = dm.DSCliente
           TabOrder = 5
         end
       end

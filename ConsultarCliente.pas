@@ -35,13 +35,11 @@ implementation
 
 uses unitDM;
 
-
 procedure TTFConsultarClientes.txtBuscaChange(Sender: TObject);
 begin
-  DM.TBClientes.Locate('NOME_CLIENTE',txtBusca.Text);
-  DM.TBClientes.Locate('ID_CLIENTE',txtBusca.Text);
-  DM.TBClientes.Locate('CPF',txtBusca.Text);
-  DM.TBClientes.Locate('CELULAR',txtBusca.Text);
+  DM.TBClientes.Locate('CPF', txtBusca.Text,[loPartialKey]);
+
 end;
+
 
 end.

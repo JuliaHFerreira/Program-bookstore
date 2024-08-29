@@ -354,13 +354,6 @@ object FCadastroLivro: TFCadastroLivro
           Caption = 'Usado'
           TabOrder = 5
         end
-        object DBEdit1: TDBEdit
-          Left = 137
-          Top = 74
-          Width = 121
-          Height = 23
-          TabOrder = 6
-        end
       end
       object GroupBox2: TGroupBox
         Left = 372

@@ -7,23 +7,11 @@ Coordinates=996,430,53,58
 [Panel1]
 Coordinates=931,430,55,58
 
-[HISTORICO]
-Coordinates=368,544,85,36
-
 [HistoricoBox]
 Coordinates=142,430,87,58
 
 [Label10]
 Coordinates=735,430,60,58
-
-[CODIGO]
-Coordinates=292,544,66,36
-
-[CEP]
-Coordinates=241,544,41,36
-
-[Label14]
-Coordinates=751,10,60,58
 
 [Label12]
 Coordinates=470,430,60,58
@@ -31,44 +19,17 @@ Coordinates=470,430,60,58
 [CadastroCliente]
 Coordinates=124,544,107,36
 
-[OBSERVACAO]
-Coordinates=10,544,104,36
-
 [Label2]
 Coordinates=253,10,53,58
-
-[ESTADO]
-Coordinates=998,498,67,36
-
-[DATANASCIMENTO]
-Coordinates=855,498,133,36
-
-[EMAIL]
-Coordinates=792,498,53,36
 
 [ContatoBox]
 Coordinates=239,430,82,58
 
-[TELEFONEFIXO]
-Coordinates=670,498,112,36
-
 [Label3]
 Coordinates=79,430,53,58
 
-[NOMECLIENTE]
-Coordinates=554,498,106,36
-
-[RG]
-Coordinates=504,498,40,36
-
 [DadosClienteBox]
 Coordinates=821,10,114,58
-
-[NUMERO]
-Coordinates=423,498,71,36
-
-[CIDADE]
-Coordinates=350,498,63,36
 
 [TFCadastroCliente]
 Coordinates=217,498,123,36
@@ -79,29 +40,17 @@ Coordinates=805,430,53,58
 [Label8]
 Coordinates=316,10,53,58
 
-[RUA]
-Coordinates=166,498,41,36
-
-[BAIRRO]
-Coordinates=93,498,63,36
-
 [Label9]
 Coordinates=688,10,53,58
 
 [EnderecoBox]
 Coordinates=587,10,91,58
 
-[CELULAR]
-Coordinates=10,498,73,36
-
 [Label13]
 Coordinates=331,430,60,58
 
 [Label1]
 Coordinates=868,430,53,58
-
-[CPF]
-Coordinates=1059,430,40,36
 
 [Label5]
 Coordinates=672,430,53,58
@@ -113,7 +62,7 @@ Coordinates=945,10,106,58
 Coordinates=448,10,60,58
 
 []
-Coordinates=149,10,94,58
+Coordinates=998,498,67,36
 Visible=True
 
 [SALVAR]
@@ -136,4 +85,7 @@ Coordinates=68,78,105,36
 
 [dm.TBClientes]
 Coordinates=10,10,129,410
+
+[Edit12]
+Coordinates=751,10,60,58
 

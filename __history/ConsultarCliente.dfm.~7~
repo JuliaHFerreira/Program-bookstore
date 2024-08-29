@@ -1,0 +1,187 @@
+object TFConsultarClientes: TTFConsultarClientes
+  Left = 0
+  Top = 0
+  Caption = 'Consultar Clientes'
+  ClientHeight = 485
+  ClientWidth = 669
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object Panel1: TPanel
+    Left = 0
+    Top = 444
+    Width = 669
+    Height = 41
+    Align = alBottom
+    TabOrder = 0
+    ExplicitWidth = 745
+    object Button2: TButton
+      Left = 8
+      Top = 8
+      Width = 89
+      Height = 25
+      Caption = #55357#56541' Alterar'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+    end
+    object Button3: TButton
+      Left = 103
+      Top = 8
+      Width = 89
+      Height = 25
+      Caption = #55357#56785' Excluir'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+    end
+    object Button4: TButton
+      Left = 198
+      Top = 8
+      Width = 89
+      Height = 25
+      Caption = #55357#56590' Consultar'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 2
+    end
+    object Button5: TButton
+      Left = 564
+      Top = 8
+      Width = 89
+      Height = 25
+      Cursor = crHandPoint
+      Caption = #10060' Cancelar'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 3
+    end
+    object Button6: TButton
+      Left = 469
+      Top = 8
+      Width = 89
+      Height = 25
+      Caption = #10004' Salvar'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 4
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Top = 64
+    Width = 669
+    Height = 374
+    DataSource = dm.DSCliente
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -12
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'ID_CLIENTE'
+        Title.Caption = 'ID'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NOME_CLIENTE'
+        Title.Caption = 'NOME CLIENTE'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CPF'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'DATA_NASCIMENTO'
+        Title.Caption = 'DATA NASCIMENTO'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = [fsBold]
+        Width = 127
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CELULAR'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end>
+  end
+  object GroupBox1: TGroupBox
+    Left = 8
+    Top = 8
+    Width = 337
+    Height = 50
+    Caption = 'Busca'
+    Color = clCream
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentBackground = False
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 2
+    object txtBusca: TEdit
+      Left = 12
+      Top = 19
+      Width = 316
+      Height = 23
+      TabOrder = 0
+      OnChange = txtBuscaChange
+    end
+  end
+end

@@ -3,7 +3,7 @@ object TFConsultarClientes: TTFConsultarClientes
   Top = 0
   Caption = 'Consultar Clientes'
   ClientHeight = 485
-  ClientWidth = 745
+  ClientWidth = 669
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,7 +14,7 @@ object TFConsultarClientes: TTFConsultarClientes
   object Panel1: TPanel
     Left = 0
     Top = 444
-    Width = 745
+    Width = 669
     Height = 41
     Align = alBottom
     TabOrder = 0
@@ -61,7 +61,7 @@ object TFConsultarClientes: TTFConsultarClientes
       TabOrder = 2
     end
     object Button5: TButton
-      Left = 648
+      Left = 564
       Top = 8
       Width = 89
       Height = 25
@@ -76,7 +76,7 @@ object TFConsultarClientes: TTFConsultarClientes
       TabOrder = 3
     end
     object Button6: TButton
-      Left = 553
+      Left = 469
       Top = 8
       Width = 89
       Height = 25
@@ -93,7 +93,7 @@ object TFConsultarClientes: TTFConsultarClientes
   object DBGrid1: TDBGrid
     Left = 0
     Top = 64
-    Width = 745
+    Width = 669
     Height = 374
     DataSource = dm.DSCliente
     TabOrder = 1
@@ -133,6 +133,7 @@ object TFConsultarClientes: TTFConsultarClientes
         Title.Font.Height = -12
         Title.Font.Name = 'Segoe UI'
         Title.Font.Style = [fsBold]
+        Width = 64
         Visible = True
       end
       item
@@ -155,6 +156,7 @@ object TFConsultarClientes: TTFConsultarClientes
         Title.Font.Height = -12
         Title.Font.Name = 'Segoe UI'
         Title.Font.Style = [fsBold]
+        Width = 64
         Visible = True
       end>
   end

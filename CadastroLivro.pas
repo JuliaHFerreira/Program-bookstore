@@ -36,7 +36,6 @@ type
     Label5: TLabel;
     CUSTO: TEdit;
     VALORALUGUEL: TEdit;
-    DBEdit1: TDBEdit;
   private
     { Private declarations }
   public

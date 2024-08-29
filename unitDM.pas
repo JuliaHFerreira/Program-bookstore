@@ -15,6 +15,7 @@ type
     BDConexao: TFDConnection;
     TBClientes: TFDTable;
     DSCliente: TDataSource;
+    FDQClientes: TFDQuery;
     TBClientesID_CLIENTE: TFDAutoIncField;
     TBClientesNOME_CLIENTE: TStringField;
     TBClientesRG: TStringField;
